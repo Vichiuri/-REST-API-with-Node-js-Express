@@ -1,12 +1,14 @@
-import Express from "express";
+const express = require('express');
+const app = express ();
+
+app.get ("/", (req, res) => {
+    res.send('Hello World');
+
+} );
 
 
-const app = EXpress ();
+app.get ("/api/courses", (req, res) => {
+    res.send([1,2,3]);
 
-//GET, PUT ,DELETE,POST
-
-app.get()
-app.post()
-app.delete()
-app.put
-
+} );
+app.listen(3000,() => console.log ('listening on port 3000....'));
